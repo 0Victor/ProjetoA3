@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="home">
+        
+        <header class="header">
+            <div class="logo">
+                <img class="logoHome" src="./images/Energy Saving Bulb.svg" alt="">
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#">Home</a>
+                <span>•</span>
+                <a href="#">Pontos</a>
+                <span>•</span>
+                <a href="#">Descarte já!</a>
+                <span>•</span>
+                <a href="#">Ranking</a>
+            </nav>
+            <img class="user-icon" src="./images/3d6f8d628c77876ee9e502e9d9a9592736bf92a7.png" alt="">
+            <button id="open-login" >Login</button>
+
+             <script>
+             const links = document.querySelectorAll('.nav-menu a');
+
+            links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Evita comportamento padrão (pular para o topo)
+                links.forEach(el => el.classList.remove('active')); // Remove de todos
+                this.classList.add('active'); // Adiciona ao clicado
+                });
+                });
+        </script>
+        </header>
+
+        <section id="modal">
+    
+            <!-- Modal -->
+            <div id="login-modal" class="modal">
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            
+    
+            <div class="top-gradient">
+                <img class="logo" src="./images/Energy Saving Bulb.svg" alt="">
+            </div>
+    
+            <div class="form-area">
+                
+    
+            <form>
+                    
+                <label for="email">Email</label>
+                <div class="input-box">
+                    <img src="./images/Letter.svg" alt="">
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+    
+                <div class="senha-area">
+                    <label for="senha">Senha</label>
+                    <a href="#" class="forgot">Esqueceu a senha?</a>
+                </div>
+                <div class="input-box">
+                    <img src="./images/Validation.svg" alt="">
+                    <input type="password" id="senha" placeholder="Digite a sua senha" required>
+                </div>
+    
+                <button type="submit">Entrar</button>
+            </form>
+    
+            <p class="register-text">Não tem conta? <a href="cadastro.html">Registre-se</a></p>
+            </div>
+            </div>
+            </div>
+        </section>
+
+    </section>
+
+  <script src="modal.js"></script>
+</body>
+</html>
