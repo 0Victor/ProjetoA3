@@ -6,7 +6,14 @@
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homePg.css">
+    <link rel="stylesheet" href="pontos.css">
+    <link rel="stylesheet" href="descarte.css">
+    <link rel="stylesheet" href="ranking.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
 </head>
 <body>
 
@@ -18,13 +25,13 @@
             </div>
 
             <nav class="nav-menu">
-                <a href="#">Home</a>
+                <a href="#" id="linkHome">Home</a>
                 <span>•</span>
-                <a href="#">Pontos</a>
+                <a href="#" id="linkPontos">Pontos</a>
                 <span>•</span>
-                <a href="#">Descarte já!</a>
+                <a href="#" id="linkDescarte">Descarte já!</a>
                 <span>•</span>
-                <a href="#">Ranking</a>
+                <a href="#" id="linkRanking">Ranking</a>
             </nav>
             <img class="user-icon" src="./images/3d6f8d628c77876ee9e502e9d9a9592736bf92a7.png" alt="">
             <button id="open-login" >Login</button>
@@ -87,42 +94,169 @@
             <div class="homePg">
                 <img class="background-blur" src="./images/01.png" alt="">
             
+                <main class="container">
+                    <h1>Bem-vindo ao Ponto de </h1> 
+                    <h1> Coleta <span>Recyclo Hub</span></h1>
+                    <p class="subtitle">
+                    Registre seu descarte para ajudar o meio ambiente<br />
+                    e subir no ranking!
+                    </p>
 
-            <main class="container">
-                <h1>Bem-vindo ao Ponto de </h1> 
-                <h1> Coleta <span>Recyclo Hub</span></h1>
-                <p class="subtitle">
-                Registre seu descarte para ajudar o meio ambiente<br />
-                e subir no ranking!
-                </p>
+                    <div class="divider"></div>
 
-                <div class="divider"></div>
+                    <div class="cards">
+                    <div class="card">
+                        <img class="encontrarPontos" src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="">
+                        <p>Encontre pontos<br>de coleta próximos</p>
+                    </div>
+                    <div class="card">
+                        <img class="ganharPontos" src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="">
+                        <p>Ganhe pontos<br>no ranking</p>
+                    </div>
+                    <div class="card">
+                        <img class="contribuir" src="./images/6abb6cc35a67cb3e9fc4368a20ea0ffe79bb560f.png" alt="">
+                        <p>Contribua para<br>um futuro mais sustentável</p>
+                    </div>
+                    </div>
 
-                <div class="cards">
-                <div class="card">
-                    <img class="encontrarPontos" src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="">
-                    <p>Encontre pontos<br>de coleta próximos</p>
-                </div>
-                <div class="card">
-                    <img class="ganharPontos" src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="">
-                    <p>Ganhe pontos<br>no ranking</p>
-                </div>
-                <div class="card">
-                    <img class="contribuir" src="./images/6abb6cc35a67cb3e9fc4368a20ea0ffe79bb560f.png" alt="">
-                    <p>Contribua para<br>um futuro mais sustentável</p>
-                </div>
-                </div>
-
-                <button class="btn">Registrar Descarte</button>
-            </main>
-        </div>
+                    <button id="btn">Registrar Descarte</button>
+                </main>
+            </div>
         </section>
         
         <img class="planta" src="./images/3a3262a3c4d6d0add4e3da470331c8be1521249e1.png" alt="">
+        
+        <section id="pontos">
+            <div class="coleta-container">
+                <h2>Pontos de Coleta Disponível</h2>
 
+                <div class="search-filters">
+                    <div class="search-bar">
+                        <img class="icon-search" src="./images/00ce40ab84de2aa070c8c8b9e30fd76bdfdac06b.png" alt="">
+                        <input type="text" placeholder="Buscar por nome, endereço ou bairro...">
+                    </div>
+
+                    <div class="filter-buttons">
+                        <button class="filter active">Total</button>
+                        <button class="filter">Ativos</button>
+                        <button class="filter">Manutenção</button>
+                    </div>
+                </div>
+
+                <div class="cardsPonto">
+                    <div class="cardPonto card1">
+                        <h3>Shopping Center Norte</h3>
+                        <p>Av. Otto Baumgart, 500<br>Vila Guilherme</p>
+                        <p><strong>Capacidade</strong><br>Até 750kg</p>
+                        <p class="status">
+                        <span class="status-dot ativo"></span> Ativo
+                        </p>
+                    </div>
+
+                    <div class="cardPonto card2">
+                        <h3>Escola Municipal Santos</h3>
+                        <p>Rua das Flores, 123<br>Centro</p>
+                        <p><strong>Capacidade</strong><br>Até 750kg</p>
+                        <p class="status">
+                        <span class="status-dot ativo"></span> Ativo
+                        </p>
+                    </div>
+
+                    <div class="cardPonto card3">
+                        <h3>Praça da       Liberdade</h3>
+                        <div class="agoravai">
+                            <p class="end">Praça da Liberdade, s/n<br>Liberdade</p>
+                            <p><strong class="cap">Capacidade</strong><br>Até 750kg</p>
+                            <p class="status">
+                            <span class="status-dot manutencao"></span> Manutenção
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section id="descarte">            
+            <div class="descartar-container">
+                <div class="descartar-img">
+                    <img src="./images/01159461e2e96c2cc335a8a7a3748e8ccd7be0dd.png" alt="Reciclagem">
+                </div>
+    
+                <div class="descartar-form">
+                    <h2>Registrar Descarte</h2>
+                    <hr>
+    
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group endereco">
+                                <label for="endereco">Endereço do ponto</label>
+                                <input type="text" id="endereco" placeholder="Digite o endereço do descarte">
+                            </div>
+                            <div class="form-group data">
+                                <label for="data">Data</label>
+                                <div class="input-with-icon">
+                                    <img src="./images/d7fdbf020781d852b1c6a1ae774950c891a9cd49.png" alt="Calendário">
+                                    <input type="date" id="data">
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="form-row">
+                            <div class="form-group objeto">
+                                <label for="objeto">Objeto descartado</label>
+                                <input type="text" id="objeto" placeholder="Digite o objeto que será descartado">
+                            </div>
+                            <div class="form-group qtd">
+                                <label for="quantidade">Quantidade</label>
+                                <input type="number" id="quantidade" placeholder="01" min="1" value="1">
+                            </div>
+                        </div>
+        
+                        <button type="submit" class="btn-descartar">Descartar</button>
+                    </form>
+
+                    <div id="toast-container"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="ranking">
+            <div class="ranking-container">
+                <div class="ranking-header">
+                    <h2>Ranking de usuários</h2>
+                    <img class="icon" src="./images/Energy Saving Bulb.svg" alt="">
+                </div>
+
+                <ul class="ranking-list" id="rankingList">
+                <!-- Itens serão inseridos via JS -->
+                </ul>
+            </div>
+        </section>
 
     </section>
 
+    <button id="scrollTopBtn" class="scroll-top">
+        <img src="./images/Energy Saving Bulb.svg" alt="Topo" class="scroll-logo">
+    </button>
+
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                © 2025 Recyclo Hub | Universidade São Judas Tadeu
+            </div>
+            <div class="footer-right">
+                <a href="#">Sobre</a> |
+                <a href="#">Contato</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+  <script src="home.js"></script>
   <script src="modal.js"></script>
+  <script src="descarte.js"></script>
+  <script src="ranking.js"></script>
 </body>
 </html>
